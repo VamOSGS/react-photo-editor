@@ -25,16 +25,13 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
-                })
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
             }
 
         ]
     },
     plugins: [
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('final.css')
     ],
     stats: {
         colors: true
