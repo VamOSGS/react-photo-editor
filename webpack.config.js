@@ -15,12 +15,12 @@ module.exports = {
         port: 9000
     },
     module: {
-        loaders: [
+        loaders:  [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015', 'react']
                 }
             },
             {

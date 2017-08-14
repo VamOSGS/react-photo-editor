@@ -1,6 +1,6 @@
-// var _ = require('lodash');
-import _ from 'lodash';
-import '../style/style.scss';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './components/App.jsx';
 
-console.log(15156);
-console.log(_.isEqual(1, 1));
+
+ReactDOM.render(<App />, document.getElementById('root'));
