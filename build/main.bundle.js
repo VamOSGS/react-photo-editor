@@ -83,10 +83,12 @@ var _lodash = __webpack_require__(2);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
+__webpack_require__(5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(15156); // var _ = require('lodash');
-
+// var _ = require('lodash');
+console.log(15156);
 console.log(_lodash2.default.isEqual(1, 1));
 
 /***/ }),
@@ -9601,6 +9603,12 @@ module.exports = function (module) {
 	}
 	return module;
 };
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
