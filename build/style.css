@@ -1,8 +1,17 @@
 body {
-  background-color: #fcfcfc; }
+  background-color: #fcfcfc;
+  margin: 0; }
   body #root .card {
-    width: 700px; }
-    body #root .card .bar {
-      width: 200px; }
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around; }
+    body #root .card .filters > div {
+      padding-bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 35vw;
+      height: 35vw;
+      align-items: center; }
 
 /*# sourceMappingURL=style.css.map*/

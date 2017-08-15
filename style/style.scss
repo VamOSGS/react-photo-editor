@@ -1,12 +1,26 @@
 body {
-   background-color: #fcfcfc;
+  background-color: #fcfcfc;
+  margin: 0;
+
+
   #root {
     .card {
-      width: 700px;
-      .bar {
-        width: 200px;
+      width: 75%;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+
+      .filters {
+
+        >div {
+          padding-bottom: 0;
+          display: flex;
+          justify-content: space-around;
+          width: 35vw;
+  height: 35vw;
+          align-items: center;
+        }
       }
     }
-
   }
- }
+}
