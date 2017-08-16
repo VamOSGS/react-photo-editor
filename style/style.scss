@@ -9,6 +9,8 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      position: absolute;
+      top: 0;
       .card {
         width: 75vw;
         margin: auto;
@@ -24,8 +26,17 @@ body {
             align-items: center;
             position: relative;
             top: 10%;
+            div {
+              .Chip {
+                text-transform: capitalize;
+              }
+            }
           }
         }
+      }
+      .list {
+        bottom: 0;
+        transform: scale(0.8);
       }
     }
   }
