@@ -25636,7 +25636,7 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -25672,31 +25672,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 (0, _reactTapEventPlugin2.default)();
 
 var App = function (_Component) {
-  _inherits(App, _Component);
+    _inherits(App, _Component);
 
-  function App() {
-    _classCallCheck(this, App);
+    function App() {
+        _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _MuiThemeProvider2.default,
-        null,
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_AppBar2.default, { title: 'React Photo Editor', iconClassNameRight: 'muidocs-icon-navigation-expand-more' }),
-          _react2.default.createElement(_Image2.default, null)
-        )
-      );
+        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
     }
-  }]);
 
-  return App;
+    _createClass(App, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _MuiThemeProvider2.default,
+                null,
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_AppBar2.default, { title: 'React Photo Editor', iconClassNameRight: 'muidocs-icon-navigation-expand-more' }),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'wrap' },
+                        _react2.default.createElement(_Image2.default, null)
+                    )
+                )
+            );
+        }
+    }]);
+
+    return App;
 }(_react.Component);
 
 exports.default = App;
@@ -32084,7 +32088,7 @@ exports.default = new Typography();
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -32108,76 +32112,89 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Image = function (_Component) {
-  _inherits(Image, _Component);
+    _inherits(Image, _Component);
 
-  function Image(props) {
-    _classCallCheck(this, Image);
+    function Image(props) {
+        _classCallCheck(this, Image);
 
-    var _this = _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this, props));
 
-    _this.state = {
-      sepia: '0',
-      brightness: '100',
-      contrast: '100',
-      saturate: '100',
-      grayscale: '0',
-      invert: '0',
-      hue: '0',
-      blur: '0'
-    };
-    return _this;
-  }
-
-  _createClass(Image, [{
-    key: 'render',
-    value: function render() {
-      var style = {
-        filter: 'sepia(' + this.state.sepia + '%) brightness(' + this.state.brightness + '%) contrast(' + this.state.contrast + '%) saturate(' + this.state.saturate + '%) grayscale(' + this.state.grayscale + '%) invert(' + this.state.invert + '%) hue-rotate(' + this.state.hue + 'deg) blur(' + this.state.blur + 'px)'
-      };
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'card' },
-          _react2.default.createElement(
-            _Card.Card,
-            null,
-            _react2.default.createElement(
-              _Card.CardMedia,
-              null,
-              _react2.default.createElement('img', { src: this.props.imgs, style: style })
-            )
-          ),
-          _react2.default.createElement(
-            _Card.Card,
-            { className: 'filters' },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(_Filter2.default, { filterName: 'Contrast', value: 100, min: 0, max: 200 }),
-              _react2.default.createElement(_Filter2.default, { filterName: 'Brightness', value: 100, min: 0, max: 200 }),
-              _react2.default.createElement(_Filter2.default, { filterName: 'Saturate', value: 100, min: 0, max: 200 }),
-              _react2.default.createElement(_Filter2.default, { filterName: 'Sepia', value: 0, min: 0, max: 100 })
-            ),
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(_Filter2.default, { filterName: 'Grayscale', value: 0, min: 0, max: 100 }),
-              _react2.default.createElement(_Filter2.default, { filterName: 'Invert', value: 0, min: 0, max: 100 }),
-              _react2.default.createElement(_Filter2.default, { filterName: 'Hue Rotate', value: 0, min: 0, max: 360 })
-            )
-          )
-        )
-      );
+        _this.state = {
+            sepia: 0,
+            brightness: 100,
+            contrast: 100,
+            saturate: 100,
+            grayscale: 0,
+            invert: 0,
+            hue: 0,
+            blur: 0
+        };
+        return _this;
     }
-  }]);
 
-  return Image;
+    _createClass(Image, [{
+        key: 'handleSlider',
+        value: function handleSlider(event, value, min) {
+            console.log(value);
+            console.log(min);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var style = {
+                filter: 'sepia(' + this.state.sepia + '%) brightness(' + this.state.brightness + '%) contrast(' + this.state.contrast + '%) saturate(' + this.state.saturate + '%) grayscale(' + this.state.grayscale + '%) invert(' + this.state.invert + '%) hue-rotate(' + this.state.hue + 'deg) blur(' + this.state.blur + 'px)'
+            };
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: 'card' },
+                    _react2.default.createElement(
+                        _Card.Card,
+                        null,
+                        _react2.default.createElement(
+                            _Card.CardMedia,
+                            null,
+                            _react2.default.createElement('img', { src: this.props.imgs, style: style })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _Card.Card,
+                        { className: 'filters' },
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            _react2.default.createElement(_Filter2.default, { find: this.handleSlider.bind(this), filterName: 'Contrast',
+                                value: this.state.contrast, min: 0, max: 200 }),
+                            _react2.default.createElement(_Filter2.default, { find: this.handleSlider.bind(this), filterName: 'Brightness',
+                                value: this.state.brightness, min: 0, max: 200 }),
+                            _react2.default.createElement(_Filter2.default, { find: this.handleSlider.bind(this), filterName: 'Saturate',
+                                value: this.state.saturate, min: 0, max: 200 }),
+                            _react2.default.createElement(_Filter2.default, { onChange: this.handleSlider.bind(this), filterName: 'Sepia', value: this.state.sepia,
+                                min: 0, max: 100 })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            _react2.default.createElement(_Filter2.default, { find: this.handleSlider.bind(this), filterName: 'Grayscale',
+                                value: this.state.grayscale, min: 0, max: 100 }),
+                            _react2.default.createElement(_Filter2.default, { find: this.handleSlider.bind(this), filterName: 'Invert', value: this.state.invert,
+                                min: 0, max: 100 }),
+                            _react2.default.createElement(_Filter2.default, { find: this.handleSlider.bind(this), filterName: 'Hue Rotate', value: this.state.hue,
+                                min: 0, max: 360 })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Image;
 }(_react.Component);
 
 Image.defaultProps = {
-  imgs: "https://source.unsplash.com/user/erondu/700x700"
+    imgs: "https://source.unsplash.com/user/erondu/700x700"
 };
 exports.default = Image;
 
@@ -36094,17 +36111,12 @@ var Filter = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this, props));
 
     _this.state = {
-      val: 50
+      val: null
     };
     return _this;
   }
 
   _createClass(Filter, [{
-    key: 'handleSlider',
-    value: function handleSlider(event, value) {
-      this.setState({ val: value });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -36115,9 +36127,9 @@ var Filter = function (_Component) {
           null,
           this.props.filterName,
           ' ',
-          this.state.val
+          this.props.value
         ),
-        _react2.default.createElement(_Slider2.default, { onChange: this.handleSlider.bind(this), style: { width: '16vw' }, value: this.props.val, min: this.props.min, max: this.props.max, step: 1 })
+        _react2.default.createElement(_Slider2.default, { name: this.props.filterName, onChange: this.props.find, style: { width: '16vw' }, value: this.props.value, min: this.props.min, max: this.props.max, step: 1 })
       );
     }
   }]);

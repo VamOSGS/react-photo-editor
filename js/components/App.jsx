@@ -7,16 +7,18 @@ import AppBar from 'material-ui/AppBar';
 injectTapEventPlugin();
 
 class App extends Component {
-  render() {
-    return (
-      <MuiThemeProvider>
-        <div>
-          <AppBar title="React Photo Editor" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
-          <Image/>
-        </div>
-      </MuiThemeProvider>
-    );
-  }
+    render() {
+        return (
+            <MuiThemeProvider>
+                <div>
+                    <AppBar title="React Photo Editor" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+                    <div className="wrap">
+                        <Image/>
+                    </div>
+                </div>
+            </MuiThemeProvider>
+        );
+    }
 }
 
 export default App;
