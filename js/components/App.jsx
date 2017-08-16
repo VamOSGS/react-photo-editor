@@ -13,7 +13,7 @@ class App extends Component {
                 <div>
                     <AppBar title="React Photo Editor" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
                     <div className="wrap">
-                        <Image/>
+                        <Image />
                     </div>
                 </div>
             </MuiThemeProvider>

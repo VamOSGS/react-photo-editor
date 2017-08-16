@@ -1,26 +1,2 @@
-body {
-  background-color: #fcfcfc;
-  margin: 0;
-  overflow: hidden; }
-  body #root .wrap {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    body #root .wrap .card {
-      width: 75vw;
-      margin: auto;
-      display: flex;
-      justify-content: space-around; }
-      body #root .wrap .card .filters > div {
-        padding-bottom: 0;
-        display: flex;
-        justify-content: space-around;
-        width: 35vw;
-        height: 35vw;
-        align-items: center;
-        position: relative;
-        top: 10%; }
-
+body{background-color:#fcfcfc;margin:0;overflow:hidden}body #root .wrap{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center}body #root .wrap .card{width:75vw;margin:auto;display:flex;justify-content:space-around}body #root .wrap .card .filters>div{padding-bottom:0;display:flex;justify-content:space-around;width:35vw;height:35vw;align-items:center;position:relative;top:10%}
 /*# sourceMappingURL=style.css.map*/
