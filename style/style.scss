@@ -19,13 +19,29 @@ body {
         .filters {
           > div {
             padding-bottom: 0;
-            display: flex;
-            justify-content: space-around;
-            width: 35vw;
-            height: 35vw;
-            align-items: center;
+
             position: relative;
-            top: 10%;
+            top: 0;
+            .sadsad {
+
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              width: 35vw;
+              height: 35vw;
+            }
+            .cssCode {
+              position: absolute;
+              display: flex;
+              width: 70%;
+              margin: auto;
+              right: 0;
+              align-items: center;
+              flex-direction: column;
+              justify-content: center;
+              left: 0;
+              top: 100px;
+            }
             div {
               .Chip {
                 text-transform: capitalize;

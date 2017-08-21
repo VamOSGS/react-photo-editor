@@ -6,23 +6,24 @@ import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 
 const tilesData = [
     {
-        img: 'https://images.unsplash.com/photo-1500332988905-1bf2a5733f63?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=270&h=180&fit=crop&s=6c91c944dad9e83ee89f6499d3a5aa72',
         title: 'Breakfast',
+        filter: 'filter: sepia(0%) brightness(100%) contrast(100%) saturate(100%) grayscale(0%) invert(0%) hue-rotate(0deg) blur(0px)',
         author: 'jill111',
     },
     {
-        img: 'https://images.unsplash.com/photo-1480434530519-525d3a430bc7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=270&h=180&fit=crop&s=ca7139a0d73f216165409d886b3190d6',
         title: 'Tasty burger',
+        filter: 'filter: sepia(0%) brightness(1200%) contrast(90%) saturate(110%) grayscale(0%) invert(0%) hue-rotate(0deg) blur(0px)',
         author: 'pashminu',
     },
     {
-        img: 'https://images.unsplash.com/photo-1474500257816-6f941168c7e7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=270&h=180&fit=crop&s=e66a4fa45d363ba6b25fb89d0c815bb9',
         title: 'Camera',
+        filter: 'filter: sepia(0%) brightness(100%) contrast(100%) saturate(100%) grayscale(0%) invert(0%) hue-rotate(0deg) blur(0px)',
         author: 'Danson67',
     },
     {
-        img: 'https://images.unsplash.com/photo-1488007436975-42c99972ff0a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=270&h=180&fit=crop&s=4c18ea96d0a317e2fd662044163f5a87',
         title: 'Morning',
+        filter: 'filter: sepia(0%) brightness(100%) contrast(100%) saturate(100%) grayscale(0%) invert(0%) hue-rotate(0deg) blur(0px)',
+
         author: 'fancycrave1',
     },
 
@@ -55,7 +56,7 @@ const Filterlist = () => (
                     titleStyle={styles.titleStyle}
                     titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
                 >
-                    <img src={tile.img} />
+                    <img style={tile.filter} src='https://images.unsplash.com/photo-1437996533264-7a6b3f2f7dfc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=700&h=700&fit=crop&s=da2576a77e482e3108a82646039b434a' />
                 </GridTile>
             ))}
         </GridList>

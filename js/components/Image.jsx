@@ -4,8 +4,8 @@ import UploadIcon from 'material-ui/svg-icons/file/cloud-upload';
 import PermMedia from 'material-ui/svg-icons/action/perm-media';
 import Filter from './Filter.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
-import Filterlist from './Filterlist.jsx'
-
+import {Tab, Tabs} from 'material-ui/Tabs';
+import TextField from 'material-ui/TextField';
 const styles = {
     button: {
         margin: 12,
@@ -67,10 +67,11 @@ class Image extends Component {
 
     handleSlider(event, value, name) {
         let obj = {}
-        let obj2 = this.state
-        obj[name] = value
+        let obj2 = this.state;
+        obj[name] = value;
+        value = value;
         console.log(obj2, obj);
-        this.setState(obj)
+        this.setState(obj);
     };
 
     render() {
@@ -88,7 +89,7 @@ class Image extends Component {
             >
                 <input type="file" onChange={this.handleUpload} style={styles.exampleImageInput}/>
             </RaisedButton>
-
+            <a href=""></a>
             <RaisedButton onClick={this.handleRandom} label="Default Image" labelPosition="before"
                           disabled={this.state.uploaded} icon={<PermMedia/>}
             />
@@ -97,26 +98,42 @@ class Image extends Component {
 
                 <Card>
                     <CardMedia>
-
                         <img src={this.state.imgUrl} style={style}/>
                     </CardMedia>
                 </Card>
+
                 <Card className="filters">
-                    <div>
-                        <Filter find={this.handleSlider} name="contrast" dVal={this.state.contrast} min={0} max={200}/>
-                        <Filter find={this.handleSlider} name="brightness" dVal={this.state.brightness} min={0}
-                                max={200}/>
-                        <Filter find={this.handleSlider} name="saturate" dVal={this.state.saturate} min={0} max={200}/>
-                        <Filter find={this.handleSlider} name="sepia" dVal={this.state.sepia} min={0} max={100}/>
-                    </div>
-                    <div>
-                        <Filter find={this.handleSlider} name="grayscale" dVal={this.state.grayscale} min={0}
-                                max={100}/>
-                        <Filter find={this.handleSlider} name="invert" dVal={this.state.invert} min={0} max={100}/>
-                        <Filter find={this.handleSlider} name="hue" dVal={this.state.hue} min={0} max={360}/>
-                    </div>
+                    <Tabs>
+                        <Tab label="Filters" >
+                            <div className="sadsad">
+                            <div>
+                                <Filter  find={this.handleSlider} name="contrast" dVal={this.state.contrast} min={0}
+                                        max={200}/>
+                                <Filter  find={this.handleSlider} name="brightness" dVal={this.state.brightness} min={0}
+                                        max={200}/>
+                                <Filter  find={this.handleSlider} name="saturate" dVal={this.state.saturate} min={0}
+                                        max={200}/>
+                                <Filter  find={this.handleSlider} name="sepia" dVal={this.state.sepia} min={0}
+                                        max={100}/>
+                            </div>
+                            <div>
+                                <Filter  find={this.handleSlider} name="grayscale" dVal={this.state.grayscale} min={0}
+                                        max={100}/>
+                                <Filter  find={this.handleSlider} name="invert" dVal={this.state.invert} min={0}
+                                        max={100}/>
+                                <Filter  find={this.handleSlider} name="blur" dVal={this.state.blur} min={0} max={20}/>
+                                <Filter  find={this.handleSlider} name="hue" dVal={this.state.hue} min={0} max={360}/>
+                            </div>
+                            </div>
+                        </Tab>
+                        <Tab label="Css code" >
+                            <div className="cssCode">
+                                <p>{`filter: sepia(${this.state.sepia}%) brightness(${this.state.brightness}%) contrast(${this.state.contrast}%) saturate(${this.state.saturate}%) grayscale(${this.state.grayscale}%) invert(${this.state.invert}%) hue-rotate(${this.state.hue}deg) blur(${this.state.blur}px)`}</p>
+                                <p>{`-webkit-filter: sepia(${this.state.sepia}%) brightness(${this.state.brightness}%) contrast(${this.state.contrast}%) saturate(${this.state.saturate}%) grayscale(${this.state.grayscale}%) invert(${this.state.invert}%) hue-rotate(${this.state.hue}deg) blur(${this.state.blur}px)`}</p>
+                            </div>
+                        </Tab>
+                    </Tabs>
                 </Card>
-                <Filterlist />
             </div>
         </div>
     }
